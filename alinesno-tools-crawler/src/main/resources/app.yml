@@ -1,0 +1,20 @@
+server.port: 8080
+
+solon.app:
+  name: 'alinesno-tools-crawler'
+  group: 'scheduler-plugin'
+
+solon.logging.appender:
+  console:
+    level: DEBUG
+  file:
+    name: "${user.home}/solon-logs/${solon.app.name}"
+    rolling: "${user.home}/solon-logs/${solon.app.name}_%d{yyyy-MM-dd_HH_mm}/%i.log"
+    level: DEBUG
+    maxFileSize: "10 GB"
+    maxHistory: "14"
+
+tools:
+  crawler:
+    parse: vuepress
+    site: https://www.vuepress.cn/
