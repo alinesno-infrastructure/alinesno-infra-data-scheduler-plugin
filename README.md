@@ -12,6 +12,23 @@
 
 通过使用 `alinesno-infra-data-scheduler-plugin`，组织可以有效地自动化日常的数据处理流程，提高运营效率，同时减少人工干预的需求。该插件特别适合需要频繁更新和处理大量数据的企业级应用场景。
 
+## 工具模块
+
+| 序号 | 模块名称                      | 功能描述         | 进度   | 使用说明          |
+| ---- | ----------------------------- | ---------------- | ------ | ----------------- |
+| 1    | alinesno-backup-database      | 备份数据库       | 未进行 | [点击查看详情]()  |
+| 2    | alinesno-backup-file          | 备份文件         | 未进行 | [点击查看详情]()  |
+| 3    | alinesno-backup-redis         | 备份 Redis       | 未进行 | [点击查看详情]()  |
+| 4    | alinesno-db-operation         | 数据库操作       | 未进行 | [点击查看详情]()  |
+| 5    | alinesno-im-send              | 消息发送         | 未进行 | [点击查看详情]()  |
+| 6    | alinesno-db-kafka             | Kafka 相关操作   | 未进行 | [点击查看详情]()  |
+| 7    | alinesno-git-clone            | Git 仓库克隆     | 未进行 | [点击查看详情]()  |
+| 8    | alinesno-git-sync             | Git 仓库同步备份 | 未进行 | [点击查看详情]()  |
+| 9    | alinesno-tools-crawler        | 网站爬虫         | 未进行 | [点击查看详情]()  |
+| 10   | alinesno-tools-readerlink     | 阅读链接工具     | 未进行 | [点击查看详情]()  |
+| 11   | alinesno-tools-search         | 搜索工具         | 未进行 | [点击查看详情]()  |
+| 12   | alinesno-oss-operation        | 对象存储操作     | 未进行 | [点击查看详情]()  |
+
 ## 主要关键字
 
 | 序号 | 类别       | 描述               |
@@ -21,48 +38,3 @@
 | 3    | 消息通知类 | (`im`)             |
 | 4    | 数据库操作 | (`db`)             |
 | 5    | 分布式存储 | (`oss`)            |
-
-## 工具模块
-
-| 序号 | 模块名称                      | 功能描述         |
-| ---- | ----------------------------- | ---------------- |
-| 1    | alinesno-backup-database      | 备份数据库       |
-| 2    | alinesno-backup-file          | 备份文件         |
-| 3    | alinesno-backup-redis         | 备份 Redis       |
-|      |                               |                  |
-| 4    | alinesno-db-operation         | 数据库操作       |
-|      |                               |                  |
-| 5    | alinesno-im-send              | 消息发送         |
-|      |                               |                  |
-| 7    | alinesno-git-clone            | Git 仓库克隆     |
-| 8    | alinesno-git-sync             | Git 仓库同步备份 |
-|      |                               |                  |
-| 9    | alinesno-tools-crawler-site   | 网站爬虫         |
-| 10   | alinesno-tools-crawler-wechat | 获取公众号文章   |
-|      |                               |                  |
-| 11   | alinesno-oss-crawler          | 网站爬虫         |
-| 12   | alinesno-oss-qiniu            | 七牛云上传       |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
