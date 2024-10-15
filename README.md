@@ -38,3 +38,11 @@
 | 3    | 消息通知类 | (`im`)             |
 | 4    | 数据库操作 | (`db`)             |
 | 5    | 分布式存储 | (`oss`)            |
+
+## 启动命令
+
+```sh
+java -jar alinesno-tools-crawler.jar \
+  --tools.crawler.site=http://portal.infra.linesno.com \
+  --tools.crawler.type=vuepress 
+```
