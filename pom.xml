@@ -4,16 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.alinesno.infra.common</groupId>
-        <artifactId>alinesno-infra-platform-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.4</version>
+        <relativePath/>
     </parent>
+
     <packaging>pom</packaging>
 
-    <groupId>com.alinesno.infra.ops</groupId>
-    <artifactId>alinesno-tool-parent</artifactId>
-    <version>${revision}</version>
+    <groupId>com.alinesno.infra.data.scheduler</groupId>
+    <artifactId>alinesno-infra-data-scheduler-plugin-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <revision>1.0.0-SNAPSHOT</revision>
@@ -26,27 +27,38 @@
     </properties>
 
     <modules>
+        <!-- 备份数据库 -->
+        <module>alinesno-backup-database</module>
+
+        <!-- 备份文件 -->
+        <module>alinesno-backup-file</module>
+
         <!-- 数据库操作 -->
-        <module>alinesno-tool-db-backup</module> <!-- 数据库备份 -->
-        <module>alinesno-tool-db-operation</module> <!-- 数据库操作 -->
+        <module>alinesno-db-operation</module>
 
-        <!-- git操作 -->
-        <module>alinesno-tool-git-clone</module> <!-- git克隆 -->
-        <module>alinesno-tool-git-sync</module> <!-- git同步 -->
-        <module>alinesno-tool-git-backup</module> <!-- git备份 -->
-        <module>alinesno-tool-git-scan</module> <!-- git扫描 -->
+        <!-- 消息发送 -->
+        <module>alinesno-im-send</module>
 
-        <!-- inspection检测 -->
-        <module>alinesno-tool-inspection-kubernetes</module>
-        <module>alinesno-tool-inspection-mysql</module>
-        <module>alinesno-tool-inspection-nginx</module>
-        <module>alinesno-tool-inspection-platform</module>
+        <!-- Kafka 相关操作 -->
+        <module>alinesno-db-kafka</module>
 
-        <!-- 短信发送 -->
-        <module>alinesno-tool-im-sender</module>
+        <!-- Git 仓库克隆 -->
+        <module>alinesno-git-clone</module>
 
-        <!-- 七牛操作 -->
-        <module>alinesno-tool-qiniu-upload</module>
+        <!-- Git 仓库同步备份 -->
+        <module>alinesno-git-sync</module>
+
+        <!-- 网站爬虫 -->
+        <module>alinesno-tools-crawler</module>
+
+        <!-- 阅读链接工具 -->
+        <module>alinesno-tools-readerlink</module>
+
+        <!-- 搜索工具 -->
+        <module>alinesno-tools-search</module>
+
+        <!-- 对象存储操作 -->
+        <module>alinesno-oss-operation</module>
     </modules>
 
     <!-- 集成 clickhouse 依赖配置 -->
