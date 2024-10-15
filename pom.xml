@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.4</version>
-        <relativePath/>
+        <groupId>org.noear</groupId>
+        <artifactId>solon-parent</artifactId>
+        <version>3.0.1</version>
+        <relativePath />
     </parent>
 
     <packaging>pom</packaging>
@@ -27,38 +27,24 @@
     </properties>
 
     <modules>
-        <!-- 备份数据库 -->
-        <module>alinesno-backup-database</module>
+        <module>scheduler-plugin-core</module> <!-- 核心模块 -->
 
-        <!-- 备份文件 -->
-        <module>alinesno-backup-file</module>
+        <module>alinesno-backup-database</module> <!-- 备份数据库 -->
+        <module>alinesno-backup-file</module> <!-- 备份文件 -->
 
-        <!-- 数据库操作 -->
-        <module>alinesno-db-operation</module>
+        <module>alinesno-db-operation</module> <!-- 数据库操作 -->
+        <module>alinesno-db-kafka</module> <!-- Kafka 相关操作 -->
 
-        <!-- 消息发送 -->
-        <module>alinesno-im-send</module>
+        <module>alinesno-im-send</module> <!-- 消息发送 -->
 
-        <!-- Kafka 相关操作 -->
-        <module>alinesno-db-kafka</module>
+        <module>alinesno-git-clone</module> <!-- Git 仓库克隆 -->
+        <module>alinesno-git-sync</module> <!-- Git 仓库同步备份 -->
 
-        <!-- Git 仓库克隆 -->
-        <module>alinesno-git-clone</module>
+        <module>alinesno-tools-crawler</module> <!-- 网站爬虫 -->
+        <module>alinesno-tools-readerlink</module> <!-- 阅读链接工具 -->
+        <module>alinesno-tools-search</module> <!-- 搜索工具 -->
 
-        <!-- Git 仓库同步备份 -->
-        <module>alinesno-git-sync</module>
-
-        <!-- 网站爬虫 -->
-        <module>alinesno-tools-crawler</module>
-
-        <!-- 阅读链接工具 -->
-        <module>alinesno-tools-readerlink</module>
-
-        <!-- 搜索工具 -->
-        <module>alinesno-tools-search</module>
-
-        <!-- 对象存储操作 -->
-        <module>alinesno-oss-operation</module>
+        <module>alinesno-oss-operation</module> <!-- 对象存储操作 -->
     </modules>
 
     <!-- 集成 clickhouse 依赖配置 -->
@@ -88,5 +74,10 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+    </build>
 
 </project>
