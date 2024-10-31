@@ -43,6 +43,7 @@
         <module>alinesno-tools-crawler</module> <!-- 网站爬虫 -->
         <module>alinesno-tools-readerlink</module> <!-- 阅读链接工具 -->
         <module>alinesno-tools-search</module> <!-- 搜索工具 -->
+        <module>alinesno-tools-office</module> <!-- Office工具类操作 -->
 
         <module>alinesno-oss-operation</module> <!-- 对象存储操作 -->
     </modules>
