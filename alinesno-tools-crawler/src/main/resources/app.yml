@@ -17,4 +17,4 @@ solon.logging.appender:
 tools:
   crawler:
     parse: vuepress
-    site: https://www.vuepress.cn/
+    site: http://portal.infra.linesno.com
