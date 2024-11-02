@@ -1,19 +1,18 @@
 package com.alinesno.infra.data.scheduler.tool;
 
 import com.alibaba.fastjson2.JSONArray;
-import com.alibaba.fastjson2.JSONObject;
 import com.alinesno.infra.data.scheduler.tool.bean.PageInfoBean;
 import com.alinesno.infra.data.scheduler.tool.crawler.WebCrawler;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.core.bean.LifecycleBean;
 
 import java.io.File;
 import java.nio.charset.Charset;
+import java.util.List;
 
 @Slf4j
 @Component
@@ -46,8 +45,13 @@ public class Config implements LifecycleBean {
 
         // 创建文件
         File file = new File(savePath , fileName + ".json");
+        File fileContent = new File(savePath , fileName + "-content.json");
+
+        List<PageInfoBean> pageInfoBeanList = crawler.getPageInfoList() ;
+        List<String> content = pageInfoBeanList.stream().map(PageInfoBean::getContent).toList();
 
         FileUtils.write(file, JSONArray.toJSONString(crawler.getPageInfoList()) , Charset.defaultCharset() , false);
+        FileUtils.write(fileContent, JSONArray.toJSONString(content) , Charset.defaultCharset() , false);
         log.info("文件写入成功：{}", file.getAbsolutePath());
     }
 
