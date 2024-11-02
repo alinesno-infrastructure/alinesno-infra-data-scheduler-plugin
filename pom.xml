@@ -46,6 +46,8 @@
         <module>alinesno-tools-office</module> <!-- Office工具类操作 -->
 
         <module>alinesno-oss-operation</module> <!-- 对象存储操作 -->
+
+        <module>alinesno-kubernetes-operation</module> <!-- Kubernetes 操作 -->
     </modules>
 
     <!-- 集成 clickhouse 依赖配置 -->
@@ -78,7 +80,16 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
-
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
