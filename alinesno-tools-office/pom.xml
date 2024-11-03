@@ -20,6 +20,12 @@
             <version>4.1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.icepear.echarts</groupId>
+            <artifactId>echarts-java</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
         <!-- 新添加的依赖-->
         <!--  markdown格式转换为html      -->
         <dependency>
