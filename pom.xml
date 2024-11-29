@@ -40,6 +40,7 @@
         <module>alinesno-git-clone</module> <!-- Git 仓库克隆 -->
         <module>alinesno-git-sync</module> <!-- Git 仓库同步备份 -->
 
+        <module>alinesno-tools-code-scan</module> <!-- 代码扫描 -->
         <module>alinesno-tools-crawler</module> <!-- 网站爬虫 -->
         <module>alinesno-tools-readerlink</module> <!-- 阅读链接工具 -->
         <module>alinesno-tools-search</module> <!-- 搜索工具 -->
