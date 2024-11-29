@@ -1,0 +1,15 @@
+server.port: 8080
+
+solon.app:
+  name: 'alinesno-tools-code-scan'
+  group: 'scheduler-plugin'
+
+solon.logging.appender:
+  console:
+    level: DEBUG
+  file:
+    name: "${user.home}/solon-logs/${solon.app.name}"
+    rolling: "${user.home}/solon-logs/${solon.app.name}_%d{yyyy-MM-dd_HH_mm}/%i.log"
+    level: DEBUG
+    maxFileSize: "10 GB"
+    maxHistory: "14"
